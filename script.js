@@ -1,4 +1,21 @@
 /*round starts*/
+let round = (a, b) => {
+    if (a == "rock" && b == "scissors") {
+        console.log("You lose! The computer chose rock!");
+    }   else if (a == "scissors" && b == "paper") {
+        console.log("You lose! The computer chose scissors!");
+    }   else if (a == "paper" && b == "rock") {
+        console.log("You lose! The computer chose paper!");
+    }   else if (a == "scissors" && b == "rock") {
+        console.log("You win! The computer chose scissors!");
+    }   else if (a == "rock" && b == "paper") {
+        console.log("You win! The computer chose rock!");
+    }   else if (a == "paper" && b == "scissors") {
+        console.log("You win! The computer chose paper!");
+    }   else {
+        console.log("It was a tie! Try again!");
+    }
+}
 /*computer makes choice*/
 let computerChoice = () => {
     let randomChoice = Math.floor(Math.random() * 100);
