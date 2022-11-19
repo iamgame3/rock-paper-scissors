@@ -11,5 +11,14 @@ let computerChoice = () => {
     }
 }
 /*human makes choice*/
+let humanChoice = () => {
+    humanInput = prompt("Rock, paper, or scissors?");
+    correctedHumanInput = humanInput.toLowerCase();
+    if (correctedHumanInput == "rock" || correctedHumanInput == "paper" || correctedHumanInput == "scissors") {
+        return (correctedHumanInput);
+    } else {
+        humanChoice();
+}
+}
 /*it is decided who won*/
 /*if rounds has reached 5, final winner is decided, else, game continues*/
