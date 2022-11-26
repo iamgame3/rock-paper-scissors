@@ -89,4 +89,12 @@ scissors.addEventListener('click', () => {
     round("scissors", computerChoice());
 });
 
+// const buttons = document.querySelectorAll('.button');
+// let press = (e) => {
+//     console.log(rock);
+//     console.log('pressing');
+//     rock.classList.add('pressing');
+//     rock.classList.remove('pressing');
+// }
+// buttons.forEach(button => button.addEventListener('click', press));
 

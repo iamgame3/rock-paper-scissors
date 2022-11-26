@@ -11,14 +11,18 @@ body {
 .rock,
 .paper,
 .scissors {
-    border: 2px solid white;
+    border: 2px solid #ffffff;
     border-radius: 8px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     padding-top: 32px;
     padding-bottom: 32px;
     margin-left: 32px;
     margin-right: 32px;
     font-size: 24px;
     width: 210px;
+}
+
+.button:active {
+    background-color: #b1b1b1;
 }
