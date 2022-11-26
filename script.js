@@ -1,24 +1,26 @@
 const result = document.querySelector('.result');
+const humanScore = document.querySelector('.human-score-value');
+const computerScore = document.querySelector('.computer-score-value');
 
 let round = (a, b) => {
     if (a == "rock" && b == "scissors") {
         result.textContent = "You win! The computer chose scissors!";
-        return "human win";
+        humanScore.textContent = parseInt(humanScore.textContent) + 1;
     }   else if (a == "scissors" && b == "paper") {
         result.textContent = "You win! The computer chose paper!";
-        return "human win"
+        humanScore.textContent = parseInt(humanScore.textContent) + 1;
     }   else if (a == "paper" && b == "rock") {
         result.textContent = "You win! The computer chose rock!";
-        return "human win";
+        humanScore.textContent = parseInt(humanScore.textContent) + 1;
     }   else if (a == "scissors" && b == "rock") {
         result.textContent = "You lose! The computer chose rock!";
-        return "comp win";
+        computerScore.textContent = parseInt(computerScore.textContent) + 1;
     }   else if (a == "rock" && b == "paper") {
         result.textContent = "You lose! The computer chose paper!";
-        return "comp win";
+        computerScore.textContent = parseInt(computerScore.textContent) + 1;
     }   else if (a == "paper" && b == "scissors") {
         result.textContent = "You lose! The computer chose scissors!";
-        return "comp win";
+        computerScore.textContent = parseInt(computerScore.textContent) + 1;
     }   else {
         result.textContent = "It was a tie! Try again!";
     }
