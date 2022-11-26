@@ -1,8 +1,14 @@
 const result = document.querySelector('.result');
 const humanScore = document.querySelector('.human-score-value');
 const computerScore = document.querySelector('.computer-score-value');
+const winner = document.querySelector('.winner');
 
 let round = (a, b) => {
+    if (humanScore.textContent == 5 || computerScore.textContent == 5) {
+        humanScore.textContent = 0;
+        computerScore.textContent = 0;
+        winner.textContent = "";
+    }
     if (a == "rock" && b == "scissors") {
         result.textContent = "You win! The computer chose scissors!";
         humanScore.textContent = parseInt(humanScore.textContent) + 1;
@@ -24,6 +30,8 @@ let round = (a, b) => {
     }   else {
         result.textContent = "It was a tie! Try again!";
     }
+    if (humanScore.textContent == 5) winner.textContent = "You rule! You beat the computer!";
+    if (computerScore.textContent == 5) winner.textContent = "You suck! The computer beat you!";
 }
 
 let computerChoice = () => {
@@ -44,37 +52,6 @@ let humanChoice = () => {
         return (correctedHumanInput);
     } else {
         humanChoice();
-}
-}
-
-// let fiveRounds = () => {
-//     let humanScoreFinal = 0;
-//     let computerScoreFinal = 0;
-//     for (let i = 0; i < 5; i++) {
-//         a = computerChoice();
-//         b = humanChoice();
-//         point = round(a, b);
-//         if (point == "human win") {
-//             humanScoreFinal++;
-//         }   else if (point == "comp win") {
-//             computerScoreFinal++;
-//         }
-//     }
-//     if (humanScoreFinal > computerScoreFinal) {
-//         return "human win";
-//     }   else if (computerScoreFinal > humanScoreFinal) {
-//         return "comp win";
-//     }
-// }
-
-let game = () => {
-    finalScore = fiveRounds();
-    if (finalScore == "comp win") {
-        return ("You suck! The computer beat you!");
-    }   else if (finalScore == "human win") {
-        return ("You rule! You beat the computer!");
-    }   else {
-        return ("How interesting... It was a tie.");
     }
 }
 
@@ -92,4 +69,3 @@ const scissors = document.querySelector('.scissors');
 scissors.addEventListener('click', () => {
     round("scissors", computerChoice());
 });
-
