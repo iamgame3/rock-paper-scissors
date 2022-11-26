@@ -88,3 +88,5 @@ const scissors = document.querySelector('.scissors');
 scissors.addEventListener('click', () => {
     round("scissors", computerChoice());
 });
+
+

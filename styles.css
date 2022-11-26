@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 256px;
+}
+
+.rock,
+.paper,
+.scissors {
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    font-size: 24px;
+    width: 210px;
+}
