@@ -43,25 +43,25 @@ let humanChoice = () => {
 }
 }
 
-let fiveRounds = () => {
-    let humanScoreFinal = 0;
-    let computerScoreFinal = 0;
-    for (let i = 0; i < 5; i++) {
-        a = computerChoice();
-        b = humanChoice();
-        point = round(a, b);
-        if (point == "human win") {
-            humanScoreFinal++;
-        }   else if (point == "comp win") {
-            computerScoreFinal++;
-        }
-    }
-    if (humanScoreFinal > computerScoreFinal) {
-        return "human win";
-    }   else if (computerScoreFinal > humanScoreFinal) {
-        return "comp win";
-    }
-}
+// let fiveRounds = () => {
+//     let humanScoreFinal = 0;
+//     let computerScoreFinal = 0;
+//     for (let i = 0; i < 5; i++) {
+//         a = computerChoice();
+//         b = humanChoice();
+//         point = round(a, b);
+//         if (point == "human win") {
+//             humanScoreFinal++;
+//         }   else if (point == "comp win") {
+//             computerScoreFinal++;
+//         }
+//     }
+//     if (humanScoreFinal > computerScoreFinal) {
+//         return "human win";
+//     }   else if (computerScoreFinal > humanScoreFinal) {
+//         return "comp win";
+//     }
+// }
 
 let game = () => {
     finalScore = fiveRounds();
@@ -73,3 +73,18 @@ let game = () => {
         return ("How interesting... It was a tie.");
     }
 }
+
+const rock = document.querySelector('.rock');
+rock.addEventListener('click', () => {
+    round("rock", computerChoice());
+});
+
+const paper = document.querySelector('.paper');
+paper.addEventListener('click', () => {
+    round("paper", computerChoice());
+});
+
+const scissors = document.querySelector('.scissors');
+scissors.addEventListener('click', () => {
+    round("scissors", computerChoice());
+});
