@@ -1,24 +1,26 @@
+const result = document.querySelector('.result');
+
 let round = (a, b) => {
     if (a == "rock" && b == "scissors") {
-        console.log("You lose! The computer chose rock!");
-        return "comp win";
+        result.textContent = "You win! The computer chose scissors!";
+        return "human win";
     }   else if (a == "scissors" && b == "paper") {
-        console.log("You lose! The computer chose scissors!");
-        return "comp win"
+        result.textContent = "You win! The computer chose paper!";
+        return "human win"
     }   else if (a == "paper" && b == "rock") {
-        console.log("You lose! The computer chose paper!");
-        return "comp win";
+        result.textContent = "You win! The computer chose rock!";
+        return "human win";
     }   else if (a == "scissors" && b == "rock") {
-        console.log("You win! The computer chose scissors!");
-        return "human win";
+        result.textContent = "You lose! The computer chose rock!";
+        return "comp win";
     }   else if (a == "rock" && b == "paper") {
-        console.log("You win! The computer chose rock!");
-        return "human win";
+        result.textContent = "You lose! The computer chose paper!";
+        return "comp win";
     }   else if (a == "paper" && b == "scissors") {
-        console.log("You win! The computer chose paper!");
-        return "human win";
+        result.textContent = "You lose! The computer chose scissors!";
+        return "comp win";
     }   else {
-        console.log("It was a tie! Try again!");
+        result.textContent = "It was a tie! Try again!";
     }
 }
 
